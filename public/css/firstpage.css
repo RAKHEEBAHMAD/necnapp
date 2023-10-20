@@ -18,8 +18,9 @@ body {
 }
 
 .container {
+    width: 100%;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -27,10 +28,16 @@ body {
     padding: 10px;
     box-sizing: border-box;
 }
-
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
 .card {
-    margin: 10px;
-    width: 150px;
+    width: 100%; 
     background: #ffffff;
     text-align: center;
     cursor: pointer;
@@ -41,6 +48,13 @@ body {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
+
+
+
+
+
+
+
 
 .card img {
     max-width: 100px;
@@ -68,7 +82,7 @@ body {
 
 @media (max-width: 768px) {
     .card {
-        width: 100%;
+        width: 50%;
     }
 }
 
