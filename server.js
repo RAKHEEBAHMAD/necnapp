@@ -15,7 +15,7 @@ app.get('/',(req,res)=>{
     res.render('firstpage');
 })
 app.get('/home',(req,res)=>{
-    res.send("hello bro")
+    res.send("hello what are u doing")
 })
 
 
