@@ -28,6 +28,7 @@ app.get('/home',(req,res)=>{
     res.send("hello sham")
 })
 app.get('/signup',(req,res)=>{
+    console.log("hello")
     res.render('form');
 })
 app.post('/signup',async (req,res)=>{
