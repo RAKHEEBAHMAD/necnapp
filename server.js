@@ -25,7 +25,7 @@ app.get('/',(req,res)=>{
     res.render('firstpage');
 })
 app.get('/home',(req,res)=>{
-    res.send("hello ")
+    res.send("hello sham")
 })
 app.get('/signup',(req,res)=>{
     res.render('form');
