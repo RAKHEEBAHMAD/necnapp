@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,24 +12,24 @@
             padding: 0;
         }
 
-        .profile {
-            max-width: 800px;
-            margin: 0 auto;
-            background: linear-gradient(to bottom, #3498db, #ffffff);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
+.profile {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #3498db, #ffffff);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-        .profile-header {
-            text-align: center;
-        }
+.profile-header {
+    text-align: center;
+}
 
-        .profile-picture {
-            max-width: 200px;
-            border-radius: 50%;
-            border: 1px solid blue;
-        }
+.profile-picture {
+    max-width: 200px;
+    border-radius: 50%;
+    border: 1px solid blue;
+}
 
         .student-name {
             font-size: 24px;
@@ -46,26 +45,26 @@
             color: #555;
         }
 
-        .profile-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+.profile-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-        .card {
-            width: 200px;
-            background-color: #fff;
-            padding: 20px;
-            margin: 10px;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
+.card {
+    width: 200px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
 
-        h2 {
-            font-size: 18px;
-            color: #333;
-        }
+h2 {
+    font-size: 18px;
+    color: #333;
+}
 
         p {
             font-size: 24px;
@@ -82,16 +81,22 @@
             margin-bottom: 5px;
         }
 
-        .add-certificate,
-        .print-data {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
+.add-certificate,
+.print-data {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
 
+.add-certificate:hover,
+.print-data:hover {
+    background-color: #0056b3;
+}
+
+<<<<<<< HEAD
         .add-certificate:hover,
         .print-data:hover {
             background-color: #0056b3;
@@ -117,6 +122,10 @@
     </style>
     <script src="https://kit.fontawesome.com/a894369998.js" crossorigin="anonymous"></script>
 
+=======
+    </style>
+    <title>User Profile</title>
+>>>>>>> 40bc1cc00c99ab1dce47be665f3ddf90c73f5f1d
 </head>
 
 <body>
@@ -150,14 +159,9 @@
             </div>
             <div class="card">
                 <h2>Certificates</h2>
-                <ul>
-                    <li>Certificate 1</li>
-                    <li>Certificate 2</li>
-                </ul>
-                <button class="add-certificate">Add Certificate</button>
             </div>
             <div class="card">
-                <button class="print-data">Print Profile Data</button>
+                <h2>Print Profile data</h2>
             </div>
         </div>
     </div>
