@@ -40,12 +40,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             width: 300px;
         }
-
-        label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
+        
         input[type="text"],
         input[type="email"],
         input[type="password"] {
@@ -149,9 +144,9 @@
             <div class="red" id="check"></div>
             <div class="show-checkbox">
                 <input type="checkbox" name="show" id="show" onclick="showpassword()">
-                <p>Show password</p>
+                <label for="show">Show password</label>
             </div>
-            </br></br>
+            </br>
             <input type="submit" id="submit" value="Sign up">
             <div class="account"><a href="/admin-login" target="_self">Already Have an Account?</a></div>
         </form>

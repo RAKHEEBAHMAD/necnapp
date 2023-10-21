@@ -24,10 +24,10 @@ mongoose
 // routes
 
 app.get("/", (req, res) => {
-  res.render("firstpage");
+  return res.render("firstpage");
 });
 app.get("/home", (req, res) => {
-  res.send("hello sham");
+  return res.send("hello sham");
 });
 
 // student page
