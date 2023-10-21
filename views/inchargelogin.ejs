@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
+    <title>login</title>
     <style>
         * {
             margin: 0;
@@ -41,13 +41,9 @@
             width: 300px;
         }
 
-        label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+       
 
         input[type="text"],
-        input[type="email"],
         input[type="password"] {
             width: 100%;
             padding: 10px;
@@ -93,29 +89,9 @@
            
         }
 
-        .otp {
-            display: flex;
-            width: 100%;
-        }
-
-        .otpinput {
-            width: 80%;
-        }
-
-        .otpbtn {
-            background: #3498db;
-            color: #fff;
-            border: none;
-            padding: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-left: 5px;
-            width: 20%;
-            height: 35px;
-        }
-        .otpbtn:hover{
-            background: #2777ac;
-        }
+        
+        
+       
 
         .show-checkbox {
             gap: 5px;
@@ -130,53 +106,41 @@
     
     <div class="container">
        
-        <form action="/signup" method="post">
-            <h1>Signup</h1>
+        <form action="/inchargelogin" method="post">
+            <h1>Log in</h1>
             <p class="red" id="msg"></p>
            
-            <input type="text" name="username" id="username" placeholder="Enter Username" required>
-            <input type="text" name="rollnumber" id="rollnumber" placeholder="Enter Rollnumber" required>
-            <input type="email" name="email" id="email" placeholder="Enter Email" required>
-           
-            <div class="otp">
-                <input type="text" name="OTP" id="OTP" class="otpinput" placeholder="Verify OTP">
-                <button type="button" id="otpbtn" class="otpbtn">Send</button>
-            </div>
             
+            <input type="text" name="Incharge" id="inchargeid" placeholder="Enter Incharge ID" required>
+           
+           
+           
             <input type="password" name="password" id="password" placeholder="Enter Password">
            
-            <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm password">
-            <div class="red" id="check"></div>
+           
+            
             <div class="show-checkbox">
                 <input type="checkbox" name="show" id="show" onclick="showpassword()">
                 <p>Show password</p>
             </div>
             </br></br>
             <input type="submit" id="submit">
-            <div class="account"><a href="/login" target="_self">Already Have an Account?</a></div>
+            <div class="account"><a href="/incharge-page" target="_self">Don't Have an Account?</a></div>
         </form>
     </div>
     <script>
         const pass = document.getElementById('password');
-        const confirmpass = document.getElementById('confirmpassword');
-        const checking = document.getElementById('check');
-
-        confirmpass.addEventListener('input', () => {
-            if (confirmpass.value === pass.value) {
-                checking.textContent = "Passwords match";
-            } else {
-                checking.textContent = "Passwords do not match";
-            }
-        });
+       
+      
         function showpassword() {
             const showpass = document.getElementById('password')
-            const confirmpass = document.getElementById('confirmpassword');
+          
             if (showpass.type == 'password') {
                 showpass.type = 'text'
-                confirmpass.type = 'text'
+                
             } else {
                 showpass.type = 'password'
-                confirmpass.type = 'password'
+               
             }
         }
 

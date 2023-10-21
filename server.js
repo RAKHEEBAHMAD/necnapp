@@ -27,11 +27,18 @@ app.get('/',(req,res)=>{
 app.get('/home',(req,res)=>{
     res.send("hello sham")
 })
-app.get('/signup',(req,res)=>{
-    console.log("hello")
-    res.render('form');
+
+// student page
+
+app.get('/studentlogin',(req,res)=>{
+    res.render('studentlogin');
 })
-app.post('/signup',async (req,res)=>{
+app.get('/student-page',(req,res)=>{
+    console.log("hello")
+    res.render('studentsignup');
+})
+
+app.post('/student-page',async (req,res)=>{
     const {username,rollnumber,email,password} = req.body;
     try{
     const newuser = await usermodel.create({
@@ -42,10 +49,28 @@ app.post('/signup',async (req,res)=>{
     });
         res.send("user created sucessfully");}
         catch(err){
-    console.error("error createing user",err);
+    console.error("error creating user",err);
 }
 
 });
+
+// incharege page
+
+app.get('/incharge-page',(req,res)=>{
+    res.render('inchargesignup');
+})
+app.get('/incharge-login',(req,res)=>{
+    res.render('inchargelogin');
+})
+
+
+// admin page
+app.get('/admin-page',(req,res)=>{
+    res.render('adminsignup');
+})
+app.get('/admin-login',(req,res)=>{
+    res.render('adminlogin');
+})
 
 app.get('/display',async (req,res)=>{
     try {
