@@ -103,27 +103,17 @@
 </head>
 
 <body>
-    
     <div class="container">
-       
         <form action="/studentlogin" method="post">
             <h1>Log in</h1>
             <p class="red" id="msg"></p>
-           
-            
             <input type="text" name="rollnumber" id="rollnumber" placeholder="Enter Roll Number" required>
-           
-           
-           
             <input type="password" name="password" id="password" placeholder="Enter Password">
-           
-           
-            
             <div class="show-checkbox">
                 <input type="checkbox" name="show" id="show" onclick="showpassword()">
                 <p>Show password</p>
             </div>
-            </br></br>
+            </br>
             <input type="submit" id="submit" value="Log in">
             <div class="account"><a href="/student-page" target="_self">Don't Have an Account?</a></div>
         </form>

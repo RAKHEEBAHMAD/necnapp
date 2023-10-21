@@ -41,8 +41,6 @@
             width: 300px;
         }
 
-       
-
         input[type="text"],
         input[type="password"] {
             width: 100%;
@@ -61,7 +59,7 @@
             cursor: pointer;
         }
 
-        #submit{
+        #submit {
             width: 100%;
             height: 40px;
             border: none;
@@ -69,7 +67,8 @@
             border-radius: 5px;
             background: #3498db;
         }
-        #submit:hover{
+
+        #submit:hover {
             width: 100%;
             background: #2777ac;
         }
@@ -78,7 +77,6 @@
             margin-bottom: 10px;
             color: red;
         }
-
         .account a {
             text-decoration: none;
             margin-top: 10px;
@@ -86,13 +84,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-           
+
         }
-
-        
-        
-       
-
         .show-checkbox {
             gap: 5px;
             display: flex;
@@ -103,54 +96,46 @@
 </head>
 
 <body>
-    
+
     <div class="container">
-       
+
         <form action="/adminlogin" method="post">
             <h1>Log in</h1>
             <p class="red" id="msg"></p>
-           
-            
             <input type="text" name="Admin" id="adminid" placeholder="Enter Admin ID" required>
-           
-           
-           
             <input type="password" name="password" id="password" placeholder="Enter Password">
-           
-           
-            
             <div class="show-checkbox">
                 <input type="checkbox" name="show" id="show" onclick="showpassword()">
                 <p>Show password</p>
             </div>
-            </br></br>
+            </br>
             <input type="submit" id="submit" value="Log in">
             <div class="account"><a href="/admin-page" target="_self">Don't Have an Account?</a></div>
         </form>
     </div>
     <script>
         const pass = document.getElementById('password');
-       
-      
+
+
         function showpassword() {
             const showpass = document.getElementById('password')
-          
+
             if (showpass.type == 'password') {
                 showpass.type = 'text'
-                
+
             } else {
                 showpass.type = 'password'
-               
+
             }
         }
 
 
 
 
-       
 
 
-      
+
+
 
     </script>
 </body>
