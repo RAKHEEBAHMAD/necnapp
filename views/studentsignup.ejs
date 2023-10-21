@@ -125,13 +125,35 @@
             align-items: center;
             font-size: 15px;
         }
+
+         /* back button */
+         #backButtonContainer {
+            position: fixed;
+            top: 10px;
+            /* Adjust the top distance as needed */
+            left: 10px;
+            /* Adjust the left distance as needed */
+        }
+
+        #goBack {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
+    <script src="https://kit.fontawesome.com/a894369998.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
     <div class="container">
-
+        <div id="backButtonContainer">
+            <i class="fa fa-arrow-left" aria-hidden="true" style="color: white;"></i>
+            <a href="#" id="goBack">Back</a>
+        </div>
         <form action="/signup" method="post">
             <h1>Signup</h1>
             <p class="red" id="msg"></p>
@@ -184,12 +206,10 @@
 
 
 
-
-
-
-
-
-
+        document.getElementById('goBack').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the default link behavior
+            window.history.back(); // Go back in the browser's history
+        });
     </script>
 </body>
 
