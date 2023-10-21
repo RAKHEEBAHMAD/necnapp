@@ -53,6 +53,11 @@ app.post("/student-page", async (req, res) => {
   }
 });
 
+app.get('/student-profile',(req,res)=>{
+   
+    res.render('studentprofile');
+})
+
 // incharege page
 app.get("/incharge-page", (req, res) => {
   res.render("inchargesignup");
