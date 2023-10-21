@@ -3,100 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #3498db, #ffffff);
-    margin: 0;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #3498db, #ffffff);
+            margin: 0;
+            padding: 0;
+        }
 
-.profile {
-    max-width: 800px;
-    margin: 0 auto;
-    background: linear-gradient(to bottom, #3498db, #ffffff);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+        .profile {
+            width: calc(100%-10px);
+            margin: 0 auto;
+            background: linear-gradient(to bottom, #3498db, #ffffff);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.profile-header {
-    text-align: center;
-}
+        .profile-header {
+            padding: 20px;
+            text-align: center;
+            border-radius: 7px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
 
-.profile-picture {
-    max-width: 200px;
-    border-radius: 50%;
-    border: 1px solid blue;
-}
+        .profile-picture {
+            max-width: 200px;
+            border-radius: 50%;
+            background-color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
 
-.student-name {
-    font-size: 24px;
-}
+        .student-name {
+            font-size: 24px;
+        }
 
-.roll-number {
-    font-size: 16px;
-    color: #555;
-}
+        .roll-number {
+            font-size: 16px;
+            color: #555;
+        }
 
-.studying-info {
-    font-size: 16px;
-    color: #555;
-}
+        .studying-info {
+            font-size: 16px;
+            color: #555;
+        }
 
-.profile-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+        .profile-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 7px;
 
-.card {
-    width: 200px;
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
+        }
 
-h2 {
-    font-size: 18px;
-    color: #333;
-}
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 150px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            color: white;
+            background-color: #f5f5f5;
+            transition: transform 0.2s;
+        }
 
-p {
-    font-size: 24px;
-    font-weight: bold;
-}
+        .card:nth-child(1) {
+            background-color: #f35d8f; 
+        }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
+        .card:nth-child(2) {
+            background-color: #f1b53d; 
+        }
 
-li {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
+        .card:nth-child(3) {
+            background-color: #ce3fe4; 
+        }
 
-.add-certificate,
-.print-data {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-}
+        .card:nth-child(4) {
+            background-color: #e3f145; 
+        }
 
-.add-certificate:hover,
-.print-data:hover {
-    background-color: #0056b3;
-}
+        .card:nth-child(5) {
+            background-color: #f14c5c; 
+        }
+        .card:nth-child(6) {
+            background-color: #4cf151; 
+        }
+        .card:nth-child(7) {
+            background-color: #526df4; 
+        }
 
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            font-size: 18px;
+            color:white;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        
     </style>
+    <title>User Profile</title>
 </head>
 <body>
     <div class="profile">
@@ -129,14 +160,9 @@ li {
             </div>
             <div class="card">
                 <h2>Certificates</h2>
-                <ul>
-                    <li>Certificate 1</li>
-                    <li>Certificate 2</li>
-                </ul>
-                <button class="add-certificate">Add Certificate</button>
             </div>
             <div class="card">
-                <button class="print-data">Print Profile Data</button>
+                <h2>Print Profile data</h2>
             </div>
         </div>
     </div>
