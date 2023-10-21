@@ -16,8 +16,8 @@
             margin: 0 auto;
             background: linear-gradient(to bottom, #3498db, #ffffff);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            /* border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
         }
 
         .profile-header {
@@ -26,6 +26,7 @@
             text-align: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             border-radius: 7px;
+            background-color: rgb(194, 185, 185);
         }
 
         .profile-picture {
@@ -45,7 +46,7 @@
 
         .studying-info {
             font-size: 16px;
-            color: #555;
+            color: #585656;
         }
 
         .profile-cards {
@@ -53,6 +54,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            background-color: rgb(1, 1, 1);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             border-radius: 7px;
         }
@@ -75,7 +77,7 @@
         }
 
         .card:nth-child(1) {
-            background-color: #f1568a; 
+            background-color: #f3447e; 
         }
 
         .card:nth-child(2) {
@@ -87,7 +89,7 @@
         }
 
         .card:nth-child(4) {
-            background-color: #e3ef61; 
+            background-color: #f0ff4a; 
         }
 
         .card:nth-child(5) {
@@ -96,8 +98,11 @@
         .card:nth-child(6) {
             background-color: #77f65d; 
         }
-        .card:nth-child(7) {
+        .card:nth-child(8) {
             background-color: #4964ee; 
+        }
+        .card:nth-child(7) {
+            background-color: #f8a03b; 
         }
         .card:nth-child(1):hover {
             transform: scale(1.05);
@@ -105,7 +110,7 @@
         }
         .card:nth-child(2):hover {
             transform: scale(1.05);
-            background-color: #ffcc66; 
+            background-color: #d02d2d; 
         }
         .card:nth-child(3):hover {
             transform: scale(1.05);
@@ -121,9 +126,13 @@
             transform: scale(1.05);
             background-color: #4edc60; 
         }
-        .card:nth-child(7):hover {
+        .card:nth-child(8):hover {
             transform: scale(1.05);
             background-color: #3d51f2; 
+        }
+        .card:nth-child(7):hover {
+            transform: scale(1.05);
+            background-color: #f1740e; 
         }
 
         
@@ -204,9 +213,10 @@
     <div class="profile">
         <div class="profile-header">
             <img class="profile-picture" src="/images/student.png" alt="Student Picture">
-            <h1 class="student-name">John Doe</h1>
-            <p class="roll-number">Roll Number: 12345</p>
-            <p class="studying-info">Year: 2nd Year, Branch: Computer Science</p>
+            <h1 class="student-name">Rakheeb Ahamed</h1>
+            <p class="roll-number">Roll Number: 20711A05G1</p>
+            <p class="studying-info">Year: 4th Year</p>
+            <p class="studying-info"> Branch: Computer Science</p>
         </div>
         <div class="profile-cards">
             <a href="#" class="card">
@@ -252,7 +262,13 @@
             </a>
             <a href="#" class="card">
                 <div >
-                    <img src="/images/printer.png" alt="Icon 7">
+                    <img src="/images/addnew.png" alt="Icon 7">
+                    <h2>Add New</h2>
+                </div>
+            </a>
+            <a href="#" class="card">
+                <div >
+                    <img src="/images/printer.png" alt="Icon 8">
                     <h2>Print Profile Data</h2>
                 </div>
             </a>
