@@ -1,7 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const usermodel = require("./models/user");
-const user = require("./models/user");
+const student = require("./models/student.js");
 const app = express();
 const PORT = 8002;
 
@@ -9,11 +8,10 @@ const PORT = 8002;
 app.set("view engine", "ejs");
 app.set("views", "./views");
 app.use(express.static("public"));
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // MongoDB connection
-
 mongoose
   .connect("mongodb://127.0.0.1:27017/necnappdb")
   .then(() => {
@@ -21,14 +19,15 @@ mongoose
   })
   .catch((err) => console.error("Error connecting to MongoDB", err));
 
-// routes
 
+// routes
 app.get("/", (req, res) => {
   return res.render("firstpage");
 });
 app.get("/home", (req, res) => {
   return res.send("hello sham");
 });
+
 
 // student page
 app.get("/studentlogin", (req, res) => {
@@ -40,8 +39,9 @@ app.get("/student-page", (req, res) => {
 
 app.post("/student-page", async (req, res) => {
   const { username, rollnumber, email, password } = req.body;
+  
   try {
-    const newuser = await usermodel.create({
+    const newuser = await student.create({
       username,
       rollnumber,
       email,
@@ -54,8 +54,7 @@ app.post("/student-page", async (req, res) => {
 });
 
 app.get('/student-profile',(req,res)=>{
-   
-    res.render('studentprofile');
+    return res.render('studentprofile');
 })
 
 // incharege page
