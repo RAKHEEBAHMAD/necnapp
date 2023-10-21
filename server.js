@@ -54,7 +54,6 @@ app.post("/student-page", async (req, res) => {
 });
 
 // incharege page
-
 app.get("/incharge-page", (req, res) => {
   res.render("inchargesignup");
 });
