@@ -12,12 +12,10 @@
         }
 
         .profile {
-            width: calc(100%-10px);
+            width: calc(100% - 50px);
             margin: 0 auto;
             background: linear-gradient(to bottom, #3498db, #ffffff);
             padding: 20px;
-            /* border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
         }
 
         .profile-header {
@@ -26,7 +24,7 @@
             text-align: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             border-radius: 7px;
-            
+         
         }
 
         .profile-picture {
@@ -35,16 +33,21 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         }
 
-        .student-name {
+        .incharge-name {
             font-size: 24px;
         }
 
-        .roll-number {
+        .incharge-id {
             font-size: 16px;
             color: #555;
         }
 
-        .studying-info {
+        .incharge-club {
+            font-size: 16px;
+            color: #585656;
+        }
+
+        .incharge-department {
             font-size: 16px;
             color: #585656;
         }
@@ -54,7 +57,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-           
+            
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             border-radius: 7px;
         }
@@ -95,44 +98,41 @@
         .card:nth-child(5) {
             background-color: #ef3f51; 
         }
+
         .card:nth-child(6) {
             background-color: #77f65d; 
         }
-        .card:nth-child(8) {
-            background-color: #4964ee; 
-        }
-        .card:nth-child(7) {
-            background-color: #f8a03b; 
-        }
+
+      
+
         .card:nth-child(1):hover {
             transform: scale(1.05);
             background-color: #ed5b88; 
         }
+
         .card:nth-child(2):hover {
             transform: scale(1.05);
             background-color: #d02d2d; 
         }
+
         .card:nth-child(3):hover {
             transform: scale(1.05);
-            background-color: #b22cff; }
+            background-color: #b22cff; 
+        }
+
         .card:nth-child(4):hover {
             transform: scale(1.05);
-            background-color: #d3e572; }
+            background-color: #d3e572; 
+        }
+
         .card:nth-child(5):hover {
             transform: scale(1.05);
             background-color: #e52d3d; 
         }
+
         .card:nth-child(6):hover {
             transform: scale(1.05);
             background-color: #4edc60; 
-        }
-        .card:nth-child(8):hover {
-            transform: scale(1.05);
-            background-color: #3d51f2; 
-        }
-        .card:nth-child(7):hover {
-            transform: scale(1.05);
-            background-color: #f1740e; 
         }
 
         
@@ -168,12 +168,9 @@
         }
 
         a {
-            text-decoration: none; 
-            color: inherit; 
-           
+            text-decoration: none;
+            color: inherit;
         }
-
-
 
         .add-certificate:hover,
         .print-data:hover {
@@ -182,18 +179,13 @@
 
         .card img {
             max-width: 70px;
-            
         }
 
-
-
-         /* back button */
-         #backButtonContainer {
+        /* back button */
+        #backButtonContainer {
             position: fixed;
             top: 10px;
-            /* Adjust the top distance as needed */
             left: 10px;
-            /* Adjust the left distance as needed */
         }
 
         #goBack {
@@ -204,72 +196,53 @@
             cursor: pointer;
         }
     </style>
-   
-    </style>
-    <title>User Profile</title>
 
+    <title>Incharge Profile</title>
 </head>
 <body>
     <div class="profile">
         <div class="profile-header">
-            <img class="profile-picture" src="/images/student.png" alt="Student Picture">
-            <h1 class="student-name">Rakheeb Ahamed</h1>
-            <p class="roll-number">Roll Number: 20711A05G1</p>
-            <p class="studying-info">Year: 4th Year</p>
-            <p class="studying-info"> Branch: Computer Science</p>
+            <img class="profile-picture" src="/images/incharge.png" alt="Incharge Picture">
+            <h1 class="incharge-name">Sujitha</h1>
+            <p class="incharge-id">Incharge ID: 12345</p>
+            <p class="incharge-club">Incharge of Club: Swara Club</p>
+            <p class="incharge-department">Department: Computer Science</p>
         </div>
         <div class="profile-cards">
-            <a href="#" class="card">
-                <div >
-                    <img src="/images/reward.png" alt="Icon 1">
-                    <h2>Total App Points</h2>
-        
+            <a href="/incharge-profile/createevent" class="card">
+                <div>
+                    <img src="/images/add-event.png" alt="Icon 1">
+                    <h2>Create New Event</h2>
                 </div>
             </a>
             <a href="#" class="card">
-                <div >
-                    <img src="/images/totalpoints.png" alt="Icon 2">
-                    <h2>App Points this Semester</h2>
-                   
+                <div>
+                    <img src="/images/registered.png" alt="Icon 2">
+                    <h2>Registerd Students</h2>
                 </div>
             </a>
             <a href="#" class="card">
-                <div >
-                    <img src="/images/banner.png" alt="Icon 3">
-                    <h2>Total Events Participated</h2>
-                   
+                <div>
+                    <img src="/images/addimages.png" alt="Icon 3">
+                    <h2>Add Event Images</h2>
                 </div>
             </a>
             <a href="#" class="card">
-                <div >
-                    <img src="/images/events.png" alt="Icon 4">
-                    <h2>Events this Semester</h2>
-                   
+                <div>
+                    <img src="/images/addwinners.png" alt="Icon 4">
+                    <h2>Add Winners</h2>
                 </div>
             </a>
             <a href="#" class="card">
-                <div >
-                    <img src="/images/trophy.png" alt="Icon 5">
-                    <h2>Events Won</h2>
-                  
+                <div>
+                    <img src="/images/editprofile.png" alt="Icon 7">
+                    <h2>Edit Profile</h2>
                 </div>
             </a>
             <a href="#" class="card">
-                <div >
-                    <img src="/images/certificate.png" alt="Icon 6">
-                    <h2>Certificates</h2>
-                </div>
-            </a>
-            <a href="#" class="card">
-                <div >
-                    <img src="/images/addnew.png" alt="Icon 7">
-                    <h2>Add New</h2>
-                </div>
-            </a>
-            <a href="#" class="card">
-                <div >
+                <div>
                     <img src="/images/printer.png" alt="Icon 8">
-                    <h2>Print Profile Data</h2>
+                    <h2>Print Event Data</h2>
                 </div>
             </a>
         </div>

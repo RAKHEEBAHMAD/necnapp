@@ -64,6 +64,13 @@ app.get("/incharge-page", (req, res) => {
 app.get("/incharge-login", (req, res) => {
   res.render("inchargelogin");
 });
+app.get("/incharge-profile", (req, res) => {
+  res.render("inchargeprofile");
+});
+
+app.get("/incharge-profile/createevent", (req, res) => {
+  res.render("createevent");
+});
 
 // admin page
 app.get("/admin-page", (req, res) => {
