@@ -82,7 +82,7 @@ app.get("/admin-login", (req, res) => {
 
 app.get("/display", async (req, res) => {
   try {
-    const users = await usermodel.find({});
+    const users = await student.find({});
     res.render("display", { users });
   } catch (error) {
     console.error("Error fetching users:", error);
