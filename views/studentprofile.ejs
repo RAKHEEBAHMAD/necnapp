@@ -1,291 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #3498db, #ffffff);
-            margin: 0;
-            padding: 0;
-        }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #3498db, #51a1f7);
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
 
-        .profile {
-            max-width: 800px;
-            margin: 0 auto;
-            background: linear-gradient(to bottom, #3498db, #ffffff);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
+    .container {
+      display: flex;
+      margin: 20px;
+      gap: 20px;
+    }
 
-        .profile-header {
-            text-align: center;
-            width: calc(100%-10px);
-            margin: 0 auto;
-            background: linear-gradient(to bottom, #3498db, #ffffff);
-            padding: 20px;
-            /* border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-        }
+    .left-container {
+      flex: 30%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-        .profile-header {
-            margin-bottom: 20px;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border-radius: 7px;
-            background-color: rgb(194, 185, 185);}
+    .profile-container {
+      flex: 40%;
+    }
 
-        .profile-picture {
-            max-width: 200px;
-            border-radius: 50%;
-            border: 1px solid blue;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-        }
+    .events-container {
+      flex: 60%;
+    }
 
-        .student-name {
-            font-size: 24px;
-        }
+    .right-container {
+      flex: 70%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-        .roll-number {
-            font-size: 16px;
-            color: #555;
-        }
+    .above-right-container {
+      flex: 40%;
+      background-color: #ffffff;
+     
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
 
-        .studying-info {
-            font-size: 16px;
-            color: #585656;
-        }
+    .below-right-container {
+      flex: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-        .profile-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border-radius: 7px;
-        }
+    .container-card {
+      background-color: #f8f8f8;
+    
+      padding: 20px;
+      border-radius: 5px;
+    }
 
-        .card {
-            width: 200px;
-            background-color: #fff;
-            height: 120px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            margin: 10px;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
+    .profile-card, .events-card {
+      text-align: center;
+    }
 
-        h2 {
-            font-size: 18px;
-            color: #333;
-            color: white;
-            background-color: #f5f5f5;
-            transition: transform 0.3s, background-color 0.3s;
-        }
+    .child-card {
+      width: calc(33.33% - 20px);
+      height: 150px;
+      background-color: #eee8e8; 
+      
+      border-radius: 5px;
+      display: flex;
+      color: rgb(67, 63, 63);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-align: center; 
+      text-decoration: none;
+      
 
-        .card:nth-child(1) {
-            background-color: #f3447e; 
-        }
+    }
 
-        .card:nth-child(2) {
-            background-color: #f01717; 
-        }
+    .child-card img {
+      max-width: 47px;
+      max-height: 47px;
+      display: block; 
+      margin: 0 auto;
+    }
 
-        .card:nth-child(3) {
-            background-color: #dc4af3; 
-        }
+    .child-card h2 {
+      font-size: 14px;
+      margin: 10px 0;
+    }
 
-        .card:nth-child(4) {
-            background-color: #f0ff4a; 
-        }
+    .child-card:nth-child(1) {
+      background-color: #f3447e;
+    }
 
-        .card:nth-child(5) {
-            background-color: #ef3f51; 
-        }
-        .card:nth-child(6) {
-            background-color: #77f65d; 
-        }
-        .card:nth-child(8) {
-            background-color: #4964ee; 
-        }
-        .card:nth-child(7) {
-            background-color: #f8a03b; 
-        }
-        .card:nth-child(1):hover {
-            transform: scale(1.05);
-            background-color: #ed5b88; 
-        }
-        .card:nth-child(2):hover {
-            transform: scale(1.05);
-            background-color: #d02d2d; 
-        }
-        .card:nth-child(3):hover {
-            transform: scale(1.05);
-            background-color: #b22cff; }
-        .card:nth-child(4):hover {
-            transform: scale(1.05);
-            background-color: #d3e572; }
-        .card:nth-child(5):hover {
-            transform: scale(1.05);
-            background-color: #e52d3d; 
-        }
-        .card:nth-child(6):hover {
-            transform: scale(1.05);
-            background-color: #4edc60; 
-        }
-        .card:nth-child(8):hover {
-            transform: scale(1.05);
-            background-color: #3d51f2; 
-        }
-        .card:nth-child(7):hover {
-            transform: scale(1.05);
-            background-color: #f1740e; 
-        }
+    .child-card:nth-child(2) {
+      background-color: #f01717;
+    }
 
-        
+    .child-card:nth-child(3) {
+      background-color: #dc4af3;
+    }
 
-        h2 {
-            font-size: 18px;
-            color: white;
-        }
+    .child-card:nth-child(4) {
+      background-color: #f0ff4a;
+    }
 
-        p {
-            font-size: 24px;
-            font-weight: bold;
-        }
+    .child-card:nth-child(5) {
+      background-color: #ef3f51;
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+    .child-card:nth-child(6) {
+      background-color: #77f65d;
+    }
 
-        li {
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
+    .child-card:nth-child(8) {
+      background-color: #4964ee;
+    }
 
-        .add-certificate,
-        .print-data {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-        .add-certificate:hover,
-        .print-data:hover {
-            background-color: #0056b3;
-        }
-        a {
-            text-decoration: none; 
-            color: inherit; 
-           
-        }
-        .add-certificate:hover,
-        .print-data:hover {
-            background-color: #0056b3;
-        }
+    .child-card:nth-child(7) {
+      background-color: #f8a03b;
+    }
 
-        .card img {
-            max-width: 70px;
-            
-        }
-        #backButtonContainer {
-            position: fixed;
-            top: 10px;
-            /* Adjust the top distance as needed */
-            left: 10px;
-            /* Adjust the left distance as needed */
-        }
+    .child-card:hover {
+      transform: scale(1.05);
+    }
 
-        #goBack {
-            text-decoration: none;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
-    <title>User Profile</title>
-</head>
-    <title>User Profile</title>
+    .profile-stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .stat-item {
+      text-align: center;
+      display: flex;
+      gap: 18px;
+      flex-direction: column;
+    }
+
+    .stat-heading {
+      font-size: 13px;
+    }
+
+    .stat-number {
+      font-weight: bold;
+      font-size: 25px;
+    }
+
+    /* Media Query for smaller screens */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-container,
+      .right-container {
+        flex: 100%;
+      }
+
+      .above-right-container {
+        order: 2; 
+      }
+
+      .below-right-container {
+        order: 3; 
+      }
+
+      .child-card {
+        width: calc(50% - 20px); 
+        height: 100px; 
+      }
+      .events-container {
+    display: none;
+  }
+    }
+
+    .info h2, .info h3 {
+  display: inline;
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px; 
+}
+
+.side-heading, .value {
+  margin: 0;
+  display: inline;
+  padding: 0 10px;
+}
+
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
-    <div class="profile">
-        <div class="profile-header">
-            <img class="profile-picture" src="/images/student.png" alt="Student Picture">
-            <h1 class="student-name">Rakheeb Ahamed</h1>
-            <p class="roll-number">Roll Number: 20711A05G1</p>
-            <p class="studying-info">Year: 4th Year</p>
-            <p class="studying-info"> Branch: Computer Science</p>
+  <div class="container">
+    <div class="left-container">
+      <div class="container-card profile-container">
+        <div class="profile-card">
+          <img src="/images/profilepic.jpg" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%;">
+          <div class="info">
+            <div class="side-heading"><h2>Name:</h2></div>
+            <div class="value"><h4>Rakheeb Ahamed</h4></div>
+          </div>
+          <div class="info">
+            <div class="side-heading"><h2>Roll Number:</h2></div>
+            <div class="value"><h4>20711A05G1</h4></div>
+          </div>
+          <div class="info">
+            <div class="side-heading"><h2>Branch:</h2></div>
+            <div class="value"><h4>Computer Science</h4></div>
+          </div>
+          
         </div>
-        <div class="profile-cards">
-            <a href="#" class="card">
-                <div >
-                    <img src="/images/reward.png" alt="Icon 1">
-                    <h2>Total App Points</h2>
-        
-                </div>
-            </a>
-            <a href="#" class="card">
-                <div >
-                    <img src="/images/totalpoints.png" alt="Icon 2">
-                    <h2>App Points this Semester</h2>
-                   
-                </div>
-            </a>
-            <a href="#" class="card">
-                <div >
-                    <img src="/images/banner.png" alt="Icon 3">
-                    <h2>Total Events Participated</h2>
-                   
-                </div>
-            </a>
-            <a href="#" class="card">
-                <div >
-                    <img src="/images/events.png" alt="Icon 4">
-                    <h2>Events this Semester</h2>
-                   
-                </div>
-            </a>
-            <a href="#" class="card">
-                <div >
-                    <img src="/images/trophy.png" alt="Icon 5">
-                    <h2>Events Won</h2>
-                  
-                </div>
-            </a>
-            <a href="#" class="card">
-                <div >
-                    <img src="/images/certificate.png" alt="Icon 6">
-                    <h2>Certificates</h2>
-                </div>
-            </a>
-            <a href="#" class="card">
-                <div >
-                    <img src="/images/addnew.png" alt="Icon 7">
-                    <h2>Add New</h2>
-                </div>
-            </a>
-            <a href="#" class="card">
-                <div >
-                    <img src="/images/printer.png" alt="Icon 8">
-                    <h2>Print Profile Data</h2>
-                </div>
-            </a>
-        </div>
+      </div>
+      <div class="container-card events-container">
+        <h2>Club Names</h2>
+        <ul style="list-style: none; font-size: 25px;">
+          <li>🎵 Swara Club</li>
+          <li>🎨 Chitra Club</li>
+          <li>🎥 Watcha Club</li>
+          <li>🍔 Culinary Club</li>
+          <li>📽️ Chalanachitra Club</li>
+        </ul>
+      </div>
     </div>
+
+    <div class="right-container">
+      <div class="container-card above-right-container">
+        <div class="profile-stats">
+          <div class="stat-item">
+            <span class="stat-heading">Total Points</span>
+        
+            <span class="stat-number">100</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-heading">Total Certificates</span>
+          
+            <span class="stat-number">5</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-heading">Current Semester</span>
+            <span class="stat-number">1000</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-heading">Events Participated</span>
+            <span class="stat-number">200</span>
+          </div>
+        </div>
+      </div>
+      <div class="container-card below-right-container">
+        <a href="#" class="child-card">
+          <div>
+            <img src="/images/reward.png" alt="Icon 1">
+            <h2>Total App Points</h2>
+          </div>
+        </a>
+        <a href="#" class="child-card">
+          <div>
+            <img src="/images/totalpoints.png" alt="Icon 2">
+            <h2>App Points this Semester</h2>
+          </div>
+        </a>
+        <a href="#" class="child-card">
+          <div>
+            <img src="/images/banner.png" alt="Icon 3">
+            <h2>Total Events Participated</h2>
+          </div>
+        </a>
+        <a href="#" class="child-card">
+          <div>
+            <img src="/images/events.png" alt="Icon 4">
+            <h2>Events this Semester</h2>
+          </div>
+        </a>
+        <a href="#" class="child-card">
+          <div>
+            <img src="/images/trophy.png" alt="Icon 5">
+            <h2>Events Won</h2>
+          </div>
+        </a>
+        <a href="#" class="child-card">
+          <div>
+            <img src="/images/certificate.png" alt="Icon 6">
+            <h2>Certificates</h2>
+          </div>
+        </a>
+        <a href="#" class="child-card">
+          <div>
+            <img src="/images/addnew.png" alt="Icon 7">
+            <h2>Add New</h2>
+          </div>
+        </a>
+        <a href="#" class="child-card">
+          <div>
+            <img src="/images/printer.png" alt="Icon 8">
+            <h2>Print Profile Data</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

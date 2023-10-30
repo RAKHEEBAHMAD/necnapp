@@ -184,8 +184,10 @@
 
         confirmpass.addEventListener('input', () => {
             if (confirmpass.value === pass.value) {
+                checking.style.color = 'green';
                 checking.textContent = "Passwords match";
             } else {
+                checking.style.color = 'red';
                 checking.textContent = "Passwords do not match";
             }
         });
